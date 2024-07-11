@@ -56,8 +56,12 @@ HTTP error 401 for prompt `features`
 
 ```sh
 └── Hand-Gesture-Control-System/
+    └──img/
+        └──img1.jpg
     ├── README.md
     └── main.py
+    └──requirments.txt
+    
 ```
 
 ---
