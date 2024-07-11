@@ -45,37 +45,36 @@
 
 ---
 
-##  Features
+### Features
 
-Real-time Hand Gesture Recognition:
+#### Real-time Hand Gesture Recognition
+- The system captures video from your webcam and processes it in real-time to detect hand gestures using MediaPipe.
 
-The system captures video from your webcam and processes it in real-time to detect hand gestures using MediaPipe.
-Hand Landmark Detection:
+#### Hand Landmark Detection
+- The system detects and identifies 21 hand landmarks (e.g., finger tips, joints) for each hand visible in the webcam feed.
 
-The system detects and identifies 21 hand landmarks (e.g., finger tips, joints) for each hand visible in the webcam feed.
-Gesture-based System Controls:
+#### Gesture-based System Controls
+- Perform specific system control actions based on recognized hand gestures:
+  - **Increase Brightness**: Raise the index finger.
+  - **Decrease Brightness**: Raise both the index and middle fingers.
+  - **Increase Volume**: Raise the index, middle, and ring fingers.
+  - **Decrease Volume**: Raise all four fingers (excluding the thumb).
+  - **Next Tab**: Raise the thumb and pinky finger.
+  - **Previous Tab**: Raise only the thumb.
+  - **Close Tab**: No fingers raised (all fingers down).
 
-Perform specific system control actions based on recognized hand gestures:
-Increase Brightness: Raise the index finger.
-Decrease Brightness: Raise both the index and middle fingers.
-Increase Volume: Raise the index, middle, and ring fingers.
-Decrease Volume: Raise all four fingers (excluding the thumb).
-Next Tab: Raise the thumb and pinky finger.
-Previous Tab: Raise only the thumb.
-Close Tab: No fingers raised (all fingers down).
-Visual Feedback:
+#### Visual Feedback
+- The system provides visual feedback by displaying the detected hand landmarks on the webcam feed.
+- Displays the status of each finger (up or down) on the screen for verification.
 
-The system provides visual feedback by displaying the detected hand landmarks on the webcam feed.
-Displays the status of each finger (up or down) on the screen for verification.
-Easy to Run:
+#### Easy to Run
+- Simple script that can be executed with a single command to start the hand gesture recognition and control system.
 
-Simple script that can be executed with a single command to start the hand gesture recognition and control system.
-Extensible:
+#### Extensible
+- Modular functions for finger status detection, brightness control, volume control, and tab management make it easy to extend or modify the gesture controls.
 
-Modular functions for finger status detection, brightness control, volume control, and tab management make it easy to extend or modify the gesture controls.
-Dependencies:
-
-Uses popular and well-supported libraries such as OpenCV for video capture and image processing, MediaPipe for hand landmark detection, PyAutoGUI for keyboard control, ScreenBrightnessControl for managing screen brightness, and Pycaw for managing system volume
+#### Dependencies
+- Uses popular and well-supported libraries such as OpenCV for video capture and image processing, MediaPipe for hand landmark detection, PyAutoGUI for keyboard control, ScreenBrightnessControl for managing screen brightness, and Pycaw for managing system volume.
 
 ---
 
@@ -141,23 +140,6 @@ Use the following command to run Hand-Gesture-Control-System:
 python main.py
 ```
 
-###  Tests
-
-To execute tests, run:
-
-```sh
-pytest
-```
-
----
-
-##  Project Roadmap
-
-- [X] `► INSERT-TASK-1`
-- [ ] `► INSERT-TASK-2`
-- [ ] `► ...`
-
----
 
 ##  Contributing
 
