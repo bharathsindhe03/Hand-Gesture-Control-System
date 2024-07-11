@@ -89,17 +89,6 @@
     └──requirments.txt
     
 ```
-
----
-
-
-
-| File                                                                                          | Summary                             |
-| ---                                                                                           | ---                                 |
-| [main.py](https://github.com/bharathsindhe03/Hand-Gesture-Control-System/blob/master/main.py) | HTTP error 401 for prompt `main.py` |
-
-</details>
-
 ---
 
 ##  Getting Started
