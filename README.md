@@ -64,11 +64,11 @@
 
 ```sh
 └── Hand-Gesture-Control-System/
-    └──img/
-        └──img1.jpg
     ├── README.md
-    └── main.py
-    └──requirments.txt
+    ├── main.py
+    ├──requirments.txt
+    ├──img/
+        ├──img1.jpg
     
 ```
 ---
