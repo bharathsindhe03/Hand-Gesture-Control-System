@@ -27,3 +27,5 @@ This project utilizes MediaPipe, OpenCV, and YOLO for real-time hand gesture rec
    ```sh
    git clone https://github.com/bharathsindhe03/Hand-Gesture-Control-System.git
    cd Hand-Gesture-Control-System
+   pip install -r requirements.txt
+   python main.py
