@@ -6,9 +6,11 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
+# Initialize MediaPipe Hands module
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 
+# Define finger landmarks for status detection
 def get_finger_status(hand_landmarks):
     finger_tips = [mp_hands.HandLandmark.INDEX_FINGER_TIP,
                    mp_hands.HandLandmark.MIDDLE_FINGER_TIP,
@@ -20,7 +22,7 @@ def get_finger_status(hand_landmarks):
 
     finger_status = [0, 0, 0, 0, 0]
 
-    
+    # Determine finger status based on landmark positions
     for i, tip in enumerate(finger_tips):
         if hand_landmarks.landmark[tip].y < hand_landmarks.landmark[tip - 2].y:
             finger_status[i + 1] = 1
@@ -30,6 +32,7 @@ def get_finger_status(hand_landmarks):
 
     return finger_status
 
+# Functions to perform actions based on finger status
 def change_tab(next_tab=True):
     if next_tab:
         pyautogui.hotkey('ctrl', 'tab')
@@ -67,9 +70,10 @@ def decrease_volume(amount=0.1):
     new_volume = max(0.0, current_volume - amount)
     volume.SetMasterVolumeLevelScalar(new_volume, None)
 
-
+# Capture video from webcam
 cap = cv2.VideoCapture(0)
 
+# Main loop for hand detection and action handling
 with mp_hands.Hands(
     model_complexity=0,
     min_detection_confidence=0.5,
@@ -81,6 +85,7 @@ with mp_hands.Hands(
             print("Ignoring empty camera frame.")
             continue
 
+        # Flip image horizontally for natural viewing
         image = cv2.cvtColor(cv2.flip(image, 1), cv2.COLOR_BGR2RGB)
         image.flags.writeable = False
         results = hands.process(image)
@@ -90,9 +95,11 @@ with mp_hands.Hands(
         
         if results.multi_hand_landmarks:
             for hand_landmarks in results.multi_hand_landmarks:
+                # Draw hand landmarks on the image
                 mp_drawing.draw_landmarks(
                     image, hand_landmarks, mp_hands.HAND_CONNECTIONS)
                 
+                # Get finger status and perform corresponding actions
                 finger_status = get_finger_status(hand_landmarks)
                 
                 if finger_status == [0, 1, 0, 0, 0]:
@@ -110,12 +117,16 @@ with mp_hands.Hands(
                 elif finger_status == [0, 0, 0, 0, 0]:
                     close_tab()
             
+                # Display finger status on the image
                 cv2.putText(image, f'Fingers: {finger_status}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2, cv2.LINE_AA)
 
+        # Show the annotated image with actions and finger status
         cv2.imshow('MediaPipe Hands', image)
         
+        # Exit loop when Esc key is pressed
         if cv2.waitKey(5) & 0xFF == 27:
             break
 
+# Release resources and close all windows
 cap.release()
 cv2.destroyAllWindows()
