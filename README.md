@@ -41,7 +41,7 @@
 ##  Overview
 
 HTTP error 401 for prompt `overview`
-![Hand Gesture Example](img\img1.jpg)
+![alt text](https://github.com/bharathsindhe03/Hand-Gesture-Control-System/blob/main/img/img1.jpg)
 
 
 ---
