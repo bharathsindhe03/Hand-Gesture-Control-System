@@ -21,23 +21,6 @@
 </p>
 <hr>
 
-##  Quick Links
-
-> - [ Overview](#-overview)
-> - [ Features](#-features)
-> - [ Repository Structure](#-repository-structure)
-> - [ Modules](#-modules)
-> - [ Getting Started](#-getting-started)
->   - [ Installation](#-installation)
->   - [ Running Hand-Gesture-Control-System](#-running-Hand-Gesture-Control-System)
->   - [ Tests](#-tests)
-> - [ Project Roadmap](#-project-roadmap)
-> - [ Contributing](#-contributing)
-> - [ License](#-license)
-> - [ Acknowledgments](#-acknowledgments)
-
----
-
 ##  Overview
 
 ![alt text](https://github.com/bharathsindhe03/Hand-Gesture-Control-System/blob/main/img/img1.jpg)
