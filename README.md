@@ -1,122 +1,59 @@
-<p align="center">
-  <img src="https://img.icons8.com/external-tal-revivo-regular-tal-revivo/96/external-readme-is-a-easy-to-build-a-developer-hub-that-adapts-to-the-user-logo-regular-tal-revivo.png" width="100" />
-</p>
-<p align="center">
-    <h1 align="center">HAND-GESTURE-CONTROL-SYSTEM</h1>
-</p>
-<p align="center">
-    <p>Enable real-time control of computer functions using hand gestures. This project utilizes OpenCV and MediaPipe to detect and interpret gestures from a webcam feed. Adjust screen brightness, control volume, and manage browser tabs with intuitive hand movements.</p>
-</p>
-<p align="center">
-	<img src="https://img.shields.io/github/last-commit/bharathsindhe03/Hand-Gesture-Control-System?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/bharathsindhe03/Hand-Gesture-Control-System?style=flat&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/bharathsindhe03/Hand-Gesture-Control-System?style=flat&color=0080ff" alt="repo-language-count">
-<p>
-<p align="center">
-		<em>Developed with the software and tools below.</em>
-</p>
-<p align="center">
-	<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python">
-</p>
-<hr>
+# Hand Gesture Control System
 
-##  Overview
+This project uses a combination of MediaPipe, OpenCV, PyAutoGUI, and other libraries to create a hand gesture control system. The system captures hand gestures via a webcam and maps them to various computer control actions such as changing tabs, adjusting brightness and volume, and closing tabs.
+
+## Features
+
+- **Change Tabs**: Move to the next or previous tab in your browser using specific hand gestures.
+- **Adjust Brightness**: Increase or decrease the screen brightness.
+- **Adjust Volume**: Increase or decrease the system volume.
+- **Close Tabs**: Close the current tab.
 
 ![alt text](https://github.com/bharathsindhe03/Hand-Gesture-Control-System/blob/main/img/img1.jpg)
 
+## Installation
 
----
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/bharathsindhe03/Hand-Gesture-Control-System.git
+    cd hand-gesture-control
+    ```
 
-### Features
+2. **Create and activate a virtual environment:**
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
-#### Real-time Hand Gesture Recognition
-- The system captures video from your webcam and processes it in real-time to detect hand gestures using MediaPipe.
+3. **Install the required packages:**
+    ```sh
+    pip install -r requirements.txt
+    ```
 
-#### Hand Landmark Detection
-- The system detects and identifies 21 hand landmarks (e.g., finger tips, joints) for each hand visible in the webcam feed.
+## Usage
 
-#### Gesture-based System Controls
-- Perform specific system control actions based on recognized hand gestures:
-  - **Increase Brightness**: Raise the index finger.
-  - **Decrease Brightness**: Raise both the index and middle fingers.
-  - **Increase Volume**: Raise the index, middle, and ring fingers.
-  - **Decrease Volume**: Raise all four fingers (excluding the thumb).
-  - **Next Tab**: Raise the thumb and pinky finger.
-  - **Previous Tab**: Raise only the thumb.
-  - **Close Tab**: No fingers raised (all fingers down).
+1. **Run the script:**
+    ```sh
+    python hand_gesture_control.py
+    ```
 
-#### Visual Feedback
-- The system provides visual feedback by displaying the detected hand landmarks on the webcam feed.
-- Displays the status of each finger (up or down) on the screen for verification.
+2. **Control actions:**
+    - **Increase Brightness:** Raise the index finger.
+    - **Decrease Brightness:** Raise the index and middle fingers.
+    - **Increase Volume:** Raise the index, middle, and ring fingers.
+    - **Decrease Volume:** Raise the index, middle, ring, and pinky fingers.
+    - **Next Tab:** Raise the thumb and pinky.
+    - **Previous Tab:** Raise only the thumb.
+    - **Close Tab:** No fingers raised.
 
-#### Easy to Run
-- Simple script that can be executed with a single command to start the hand gesture recognition and control system.
+## Dependencies
 
-#### Extensible
-- Modular functions for finger status detection, brightness control, volume control, and tab management make it easy to extend or modify the gesture controls.
+- `opencv-python`
+- `mediapipe`
+- `pyautogui`
+- `screen_brightness_control`
+- `pycaw`
 
-#### Dependencies
-- Uses popular and well-supported libraries such as OpenCV for video capture and image processing, MediaPipe for hand landmark detection, PyAutoGUI for keyboard control, ScreenBrightnessControl for managing screen brightness, and Pycaw for managing system volume.
-
----
-
-##  Repository Structure
-
+You can install these dependencies using the following command:
 ```sh
-└── Hand-Gesture-Control-System/
-    ├── README.md
-    ├── main.py
-    ├──requirments.txt
-    ├──img/
-        ├──img1.jpg
-    
-```
----
-
-##  Getting Started
-
-***Requirements***
-
-Ensure you have the following dependencies installed on your system:
-
-* **Python**: `3.9`
-
-###  Installation
-
-1. Clone the Hand-Gesture-Control-System repository:
-
-```sh
-git clone https://github.com/bharathsindhe03/Hand-Gesture-Control-System
-```
-
-2. Change to the project directory:
-
-```sh
-cd Hand-Gesture-Control-System
-```
-
-3. Install the dependencies:
-
-```sh
-pip install -r requirements.txt
-```
-
-###  Running Hand-Gesture-Control-System
-
-Use the following command to run Hand-Gesture-Control-System:
-
-```sh
-python main.py
-```
-
-
-## Contact Information
-
-If you have any questions, suggestions, or feedback, feel free to reach out:
-
-- **Email:** [aravind.shyamkrishna@gmail.com] and [sindhebharath10@gmail.com]
-
-
-Feel free to connect or send a message! We'd love to hear from you.
-
----
+pip install opencv-python mediapipe pyautogui screen_brightness_control pycaw
