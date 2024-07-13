@@ -19,13 +19,8 @@ This project uses a combination of MediaPipe, OpenCV, PyAutoGUI, and other libra
     cd hand-gesture-control
     ```
 
-2. **Create and activate a virtual environment:**
-    ```sh
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
 
-3. **Install the required packages:**
+2. **Install the required packages:**
     ```sh
     pip install -r requirements.txt
     ```
