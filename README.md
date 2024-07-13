@@ -52,3 +52,14 @@ This project uses a combination of MediaPipe, OpenCV, PyAutoGUI, and other libra
 You can install these dependencies using the following command:
 ```sh
 pip install opencv-python mediapipe pyautogui screen_brightness_control pycaw
+
+## Contact Information
+
+If you have any questions, suggestions, or feedback, feel free to reach out:
+
+- **Email:** [aravind.shyamkrishna@gmail.com] and [sindhebharath10@gmail.com]
+
+
+Feel free to connect or send a message! We'd love to hear from you.
+
+---
